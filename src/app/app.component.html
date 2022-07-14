@@ -1,0 +1,41 @@
+
+
+<mat-toolbar>
+    <span style="color: cyan">Crypto-Trend Tracker</span>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" aria-current="page" routerLink="coin-home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  style="color: white"  aria-current="page" routerLink="coin-list">List</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <span class="example-spacer"></span>
+    <mat-form-field>
+        <mat-select (valueChange)="sendCurrency($event)" class="text-sm" [(ngModel)]="selectedCurrency">
+            <mat-option selected value="INR">INR</mat-option>
+            <mat-option value="USD">USD</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>
+ <!-- Footer -->
+ <footer class="page-footer font-small">
+    <div class="footer text-center p-3" style="color: white;">
+      Crypto-Trend Tracker <br>
+      Made by  <a href="mailto:utsavspanchal2001@gmail.com" style="color: white;" >Utsav Panchal</a>
+    </div>
+  </footer>
